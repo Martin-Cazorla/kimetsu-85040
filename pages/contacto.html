@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Contacto - Kimetsu no Yaiba</title>
+</head>
+<body class="contacto-page-body">
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="site-title">
+                <a href="../index.html" aria-label="Ir a la página de inicio">
+                    <img src="../assets/img/logo-kimetsu-2.jpg" alt="Logo de Kimetsu no Yaiba">
+                </a>
+            </h1>
+
+            <nav class="main-nav" aria-label="Navegación principal del sitio">
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./capitulos.html">Capítulos</a>
+                    </li>
+                    <li>
+                        <a href="./personajes.html">Personajes</a>
+                    </li>
+                    <li>
+                        <a href="./historia.html">Historia</a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contacto-page-content">
+        
+        <div class="contact-wrapper">
+            <hgroup class="page-intro">
+                <h2 class="contact-title">¡Contáctanos!</h2>
+                <p>Envíanos tus dudas, sugerencias o tu personaje favorito.</p>
+            </hgroup>
+            
+            <form action="#" method="POST" class="contact-form">
+                
+                <div class="grid-layout-2-cols">
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre o apodo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="tu.correo@ejemplo.com">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" required placeholder="Tema de tu consulta">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribe aquí tu mensaje..."></textarea>
+                </div>
+
+                <div class="flex-consent-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Acepto la política de privacidad y que me contacten.</label>
+                </div>
+                
+                <button type="submit" class="submit-button">
+                    Enviar Mensaje 🔥
+                </button>
+            </form>
+            
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Cazorla Studio. Todos los derechos reservados.</p>
+            <p>Contacto: martincazorlasota@gmail.com</p>
+        </div>
+
+        <div class="social-links">
+            <h3>Síguenos</h3>
+            <ul>
+                <li>
+                    <a href="https://www3.animeflv.net/anime/kimetsu-no-yaiba" target="_blank" rel="noopener noreferrer">Animeflv</a>
+                </li>
+                <li>
+                    <a href="URL-CAZORLAIG" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Cazorla Studio">
+                        <span class="icon-instagram" aria-hidden="true"></span> Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="URL-CAZORLAFACEBOOK" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Cazorla Studio">
+                        <span class="icon-facebook" aria-hidden="true"></span> Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="URL-CAZORLAX" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) de Cazorla Studio">
+                        <span class="icon-x" aria-hidden="true"></span> X
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
