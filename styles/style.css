@@ -61,8 +61,9 @@ body:hover .main-header,
     transition: color 0.3s, background-color 0.3s;
 }
 
-.main-nav a:hover {
-    color: #ff4500;
+
+.navbar-nav .nav-link:hover {
+    color: #ff4500 !important;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -359,6 +360,7 @@ h2 {
     font-size: 0.9em;
     margin-bottom: 5px;
 }
+
 .video-meta strong {
     color: #ff4500;
 }
@@ -388,10 +390,12 @@ h2 {
 .episodios-carousel::-webkit-scrollbar {
     height: 8px;
 }
+
 .episodios-carousel::-webkit-scrollbar-thumb {
     background-color: #ff4500;
     border-radius: 10px;
 }
+
 .episodios-carousel::-webkit-scrollbar-track {
     background: #1a1a1a;
 }
