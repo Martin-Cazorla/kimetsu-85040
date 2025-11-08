@@ -11,33 +11,38 @@
 <body class="personajes-page-body">
 
     <header class="main-header">
-        <div class="header-content">
-            <h1 class="site-title">
-                <a href="../index.html" aria-label="Ir a la página de inicio">
-                    <img src="../assets/img/logo-kimetsu-2.jpg" alt="Logo de Kimetsu no Yaiba">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.9);">
+            <div class="container-fluid">
+            
+                <a class="navbar-brand" href="../index.html" aria-label="Ir a la página de inicio">
+                    <img src="../assets/img/logo-kimetsu-2.jpg" alt="Logo de Kimetsu no Yaiba" style="height: 50px;">
                 </a>
-            </h1>
 
-            <nav class="main-nav" aria-label="Navegación principal del sitio">
-                <ul>
-                    <li>
-                        <a href="../index.html">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="./capitulos.html">Capítulos</a>
-                    </li>
-                    <li>
-                        <a href="./personajes.html">Personajes</a>
-                    </li>
-                    <li>
-                        <a href="./historia.html">Historia</a>
-                    </li>
-                    <li>
-                        <a href="./contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./capitulos.html">Capítulos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./personajes.html">Personajes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./historia.html">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main class="personajes-page-content">
