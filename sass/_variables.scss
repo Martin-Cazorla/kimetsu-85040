@@ -1,14 +1,32 @@
+//colores principales//
+$color-acento: #ff4500;
+$color-acento-hover: #e63900;
+$color-texto-base: #fff;
+$color-texto-claro: #ccc;
+$color-fondo-base: #000;
+$color-fondo-oscuro: #1a1a1a;
+$color-fondo-claro: #2c2c2c;
 
-$fuentePrimaria: Roboto;
-$fuenteSecundaria: sans-serif;
-$fuenteColorPrimario: #fff;
-$fuenteColorHover: #ff4500;
-$bakground-color: rgba(0, 0, 0, 0.9)
+//tipografia y espaciado//
+$fuente-principal: 'Roboto', sans-serif;
+$peso-negrita: 700;
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+// Espaciado//
+$espaciado-sm: 10px;
+$espaciado-md: 20px;
+$espaciado-lg: 40px;
 
+// Diseño//
+$radio-borde-sm: 5px;
+$radio-borde-md: 10px;
+
+//Diseño y layout//
+$ancho-max-xl: 1200px;
+$ancho-max-lg: 1000px;
+$padding-top-header: 100px;
+
+// Header/Layout//
+$zindex-header: 100;
+$sombra-header: 0 4px 6px rgba(0, 0, 0, 0.5);
+$tiempo-transicion-base: 0.3s;
 //extends y Mixins//

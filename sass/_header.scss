@@ -1,1 +1,7 @@
 //aca va a ir toso el codigo de css y sass de mi header y su responsive//
+
+@use "variables" as v;
+
+header{
+    background-color: v.$bakgroundColor;
+}
