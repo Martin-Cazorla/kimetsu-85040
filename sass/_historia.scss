@@ -1,3 +1,91 @@
+//aca va a ir todo el codigo de css y sass de mi historia y su responsive
 
 @use "variables" as v;
 @use "mixins" as m;
+
+// Estilos del Body y Contenido Principal
+.historia-page-body {
+    min-height: 100vh;
+    background-color: v.$color-fondo-base;
+    background-image: url('../assets/img/wallpapersden.com_demon-slayer-kimetsu-no-yaiba-hd-poster_1920x1080.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+.historia-page-content {
+    padding-top: v.$padding-top-header;
+    padding-bottom: v.$espaciado-lg; 
+    background-color: v.$fondo-transparente-negro-medio;
+    min-height: calc(100vh - 150px); 
+}
+
+.historia-container {
+    max-width: v.$ancho-max-md; 
+    margin: 0 auto;
+    padding: 0 v.$espaciado-md; 
+}
+
+// Títulos y Párrafos
+.historia-title {
+    color: v.$color-acento;
+    font-size: 2.8em;
+    margin-bottom: v.$espaciado-sm;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(v.$color-acento, 0.5); 
+}
+
+.historia-subtitle {
+    color: v.$color-acento;
+    font-size: 1.8em;
+    margin-top: v.$espaciado-lg;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(v.$color-acento, 0.5);
+    padding-bottom: 5px;
+}
+
+.historia-section {
+    p {
+        color: v.$color-texto-base;
+        font-size: 1.1em;
+        line-height: 1.7; 
+        margin-bottom: 1.5em; 
+        text-align: left; 
+        text-shadow: 1px 1px 3px rgba(v.$color-fondo-base, 0.8);
+        strong {
+            color: v.$color-highlight;
+        }
+    }
+}
+
+// Estilo para la conclusión
+.conclusion {
+    font-style: italic;
+    padding: 15px;
+    border-left: 5px solid v.$color-acento;
+    background-color: rgba(v.$color-texto-base, 0.05); 
+    margin-top: 30px !important; 
+}
+
+// Estilos de la intro
+.page-intro {
+    text-align: center;
+    margin: 0 auto 30px auto;
+    padding: 0 v.$espaciado-md; 
+
+    p {
+        color: v.$color-texto-claro;
+        font-size: 1.1em;
+        margin-bottom: 0;
+    }
+}
+
+// Media Query 
+@include m.mobile-only {
+    .historia-title {
+        font-size: 2.2em;
+    }
+    .historia-section p {
+        font-size: 1em;
+    }
+}
