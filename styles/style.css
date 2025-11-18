@@ -330,5 +330,179 @@ h2 {
     flex: 0 0 180px;
   }
 }
+.page-intro h2 {
+  color: #ff4500;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.personajes-page-body {
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.personajes-page-content {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.page-intro {
+  text-align: center;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+.page-intro p {
+  color: #ccc;
+  font-size: 1.1em;
+}
+
+.personaje-card {
+  min-height: calc(100vh - 80px);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+}
+.personaje-card#tanjiro {
+  background-image: url("../assets/img/tanjiro.jpeg");
+}
+.personaje-card#nezuko {
+  background-image: url("../assets/img/nezuko.jpeg");
+}
+.personaje-card#inosuke {
+  background-image: url("../assets/img/inozuke.jpeg");
+}
+.personaje-card#zenitsu {
+  background-image: url("../assets/img/zenitsu.jpeg");
+}
+.personaje-card#giyu {
+  background-image: url("../assets/img/tomioka2.jpeg");
+}
+.personaje-card#kyojuro {
+  background-image: url("../assets/img/uzui2.jpeg");
+}
+.personaje-card#shinobu {
+  background-image: url("../assets/img/shinobu2.jpeg");
+}
+.personaje-card#tengen {
+  background-image: url("../assets/img/rengoku2.jpeg");
+}
+.personaje-card#gyomei {
+  background-image: url("../assets/img/gyomei2.jpeg");
+}
+.personaje-card#sanemi {
+  background-image: url("../assets/img/sanemi2.jpeg");
+}
+.personaje-card#muichiro {
+  background-image: url("../assets/img/tokito2.jpeg");
+}
+.personaje-card#mitsuri {
+  background-image: url("../assets/img/mitsuri2.jpeg");
+}
+.personaje-card#obanai {
+  background-image: url("../assets/img/iguro2.jpeg");
+}
+
+.personaje-content-wrapper {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 0;
+  border: 2px solid #ff4500;
+}
+.personaje-content-wrapper .personaje-title {
+  color: #ff4500;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.personaje-content-wrapper .personaje-details {
+  display: block;
+  overflow: hidden;
+}
+.personaje-content-wrapper .personaje-details .personaje-image {
+  float: left;
+  margin: 0 20px 10px 0;
+  padding: 0;
+  text-align: center;
+}
+.personaje-content-wrapper .personaje-details .personaje-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 3px solid #ff4500;
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
+  max-height: 250px;
+  object-fit: contain;
+}
+.personaje-content-wrapper .personaje-details .personaje-image figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #ccc;
+  font-size: 0.9em;
+}
+.personaje-content-wrapper .personaje-details .personaje-description p {
+  line-height: 1.6;
+  color: #fff;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 1;
+  transition: none;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ff4500;
+  border-radius: 50%;
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.4);
+}
+.carousel-control-prev.carousel-control-prev-icon,
+.carousel-control-next.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff4500'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+.carousel-control-prev.carousel-control-next-icon,
+.carousel-control-next.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff4500'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-prev:hover .carousel-control-next-icon,
+.carousel-control-next:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(255, 69, 0, 0.2);
+  border-color: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 768px) {
+  .personaje-content-wrapper {
+    max-width: 500px;
+    padding: 40px;
+  }
+  .personaje-image {
+    float: right;
+    margin: 0 0 10px 20px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
