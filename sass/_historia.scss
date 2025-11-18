@@ -21,7 +21,7 @@
 }
 
 .historia-container {
-    max-width: v.$ancho-max-md; 
+    max-width: v.$ancho-max-xl; 
     margin: 0 auto;
     padding: 0 v.$espaciado-md; 
 }
@@ -52,9 +52,6 @@
         margin-bottom: 1.5em; 
         text-align: left; 
         text-shadow: 1px 1px 3px rgba(v.$color-fondo-base, 0.8);
-        strong {
-            color: v.$color-highlight;
-        }
     }
 }
 

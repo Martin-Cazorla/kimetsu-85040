@@ -73,7 +73,7 @@
         input,
         textarea {
             padding: v.$espaciado-sm;
-            border: 1px solid v.$color-gris-oscuro; 
+            border: 1px solid #555; 
             border-radius: v.$radio-borde-sm; 
             background-color: v.$color-fondo-claro; 
             color: v.$color-texto-base;
@@ -101,7 +101,7 @@
 
     label {
         color: v.$color-texto-claro;
-        font-weight: v.$peso-regular; 
+        font-weight: 400; 
         font-size: 0.9em;
         margin: 0;
     }
