@@ -1,0 +1,27 @@
+@use "variables" as v;
+
+// Mixin para Media Queries "min-width"
+@mixin tablet-up {
+    @media (min-width: v.$breakpoint-sm) {
+        @content;
+    }
+}
+
+@mixin desktop-small-up {
+    @media (min-width: v.$breakpoint-md) {
+        @content;
+    }
+}
+
+@mixin desktop-large-up {
+    @media (min-width: v.$breakpoint-lg) {
+        @content;
+    }
+}
+
+// Mixin para Media Queries "max-width"
+@mixin mobile-only {
+    @media (max-width: (v.$breakpoint-sm - 1px)) {
+        @content;
+    }
+}

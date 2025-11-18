@@ -1,9 +1,15 @@
 //archivo principal de sass//
 
+// ABSTRACT //
 @use "variables";
+@use "mixins";
+
+// LAYOUT //
 @use "header";
 @use "footer";
 @use "home";
+
+// PAGES //
 @use "capitulos";
 @use "personajes";
 @use "historia";

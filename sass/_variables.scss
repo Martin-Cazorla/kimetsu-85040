@@ -29,4 +29,16 @@ $padding-top-header: 100px;
 $zindex-header: 100;
 $sombra-header: 0 4px 6px rgba(0, 0, 0, 0.5);
 $tiempo-transicion-base: 0.3s;
+
 //extends y Mixins//
+
+// Breakpoints //
+$breakpoint-sm: 600px; 
+$breakpoint-md: 768px; 
+$breakpoint-lg: 992px; 
+
+// Fondos con Transparencia //
+$fondo-transparente-negro-alto: rgba(0, 0, 0, 0.9); 
+$fondo-transparente-negro-medio: rgba(0, 0, 0, 0.75); 
+$fondo-transparente-negro-bajo: rgba(0, 0, 0, 0.6); 
+$fondo-transparente-gris-claro: rgba(255, 255, 255, 0.1); 

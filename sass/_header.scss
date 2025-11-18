@@ -1,7 +1,78 @@
 //aca va a ir toso el codigo de css y sass de mi header y su responsive//
-
 @use "variables" as v;
+@use "mixins" as m;
 
-header{
-    background-color: v.$bakgroundColor;
+//  Estilos Base del Header
+.main-header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: v.$zindex-header; 
+    
+    // Apariencia
+    background-color: v.$fondo-transparente-negro-alto; 
+    box-shadow: v.$sombra-header;
+    
+    // Animación 
+    transform: translateY(-100%); 
+    transition: transform v.$tiempo-transicion-base ease-in-out; 
+
+    // Estado visible al hacer hover sobre el body o al enfocar
+    body:hover &,
+    &:focus-within {
+        transform: translateY(0);
+    }
+
+    //  Contenido Interno del Header
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: v.$espaciado-sm v.$espaciado-md;
+        max-width: v.$ancho-max-xl;
+        margin: 0 auto;
+
+        // Título/Logo del sitio
+        .site-title img {
+            height: 50px; 
+            vertical-align: middle;
+        }
+
+        //  Navegación Principal 
+        .main-nav {
+            ul {
+                list-style: none;
+                display: flex;
+                gap: v.$espaciado-md;
+                a {
+                    color: v.$color-texto-base;
+                    text-decoration: none;
+                    font-weight: v.$peso-negrita;
+                    padding: 5px v.$espaciado-sm;
+                    border-radius: v.$radio-borde-sm;
+                    transition: color v.$tiempo-transicion-base, background-color v.$tiempo-transicion-base;
+                }
+            }
+        }
+    }
+}
+
+//  Estilos de Hover 
+.main-nav a:hover,
+.navbar-nav .nav-link:hover {
+    color: v.$color-acento !important; 
+    background-color: v.$fondo-transparente-gris-claro;
+}
+
+// Responsive Design 
+@include m.desktop-large-up {
+    .main-header {
+        .header-content {
+            padding: v.$espaciado-sm v.$espaciado-lg; 
+        }
+        .main-nav ul {
+            gap: 30px; 
+        }
+    }
 }
