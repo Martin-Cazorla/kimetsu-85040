@@ -1,3 +1,151 @@
+//aca va a ir todo el codigo de css y sass de mi contacto y su responsive
 
 @use "variables" as v;
 @use "mixins" as m;
+
+// Estilos del Body y Contenido Principal
+.contacto-page-body {
+    min-height: 100vh;
+    background-color: v.$color-fondo-base; 
+    background-image: url('../assets/img/portada-contacto2.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed; 
+}
+
+.contacto-page-content {
+    padding-top: v.$padding-top-header; 
+    padding-bottom: v.$espaciado-lg; 
+    background-color: v.$fondo-transparente-negro-medio;
+    min-height: calc(100vh - 150px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// Estilo descripción de la página
+.page-intro p {
+    color: v.$color-texto-claro; 
+    text-align: center;
+    margin-bottom: v.$espaciado-md * 1.5; 
+}
+
+// Contenedor del Formulario
+.contact-wrapper {
+    max-width: 700px; 
+    width: 90%;
+    margin: 0 auto;
+    padding: v.$espaciado-md * 1.5; 
+    background-color: rgba(20, 20, 20, 0.9); 
+    border-radius: v.$radio-borde-md;
+    border: 2px solid v.$color-acento;
+    box-shadow: 0 0 20px rgba(v.$color-acento, 0.4); 
+    
+    .contact-title {
+        color: v.$color-acento;
+        font-size: 2.5em;
+        text-align: center;
+        margin-bottom: v.$espaciado-md;
+    }
+
+    .contact-form {
+        display: grid;
+        gap: v.$espaciado-md; 
+
+        .grid-layout-2-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: v.$espaciado-md;
+        }
+    }
+    
+    // Estilos Campos y Etiquetas
+    .form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            color: v.$color-acento;
+            font-weight: v.$peso-negrita;
+            margin-bottom: v.$radio-borde-sm;
+        }
+
+        input,
+        textarea {
+            padding: v.$espaciado-sm;
+            border: 1px solid v.$color-gris-oscuro; 
+            border-radius: v.$radio-borde-sm; 
+            background-color: v.$color-fondo-claro; 
+            color: v.$color-texto-base;
+            font-size: 1em;
+            transition: border-color v.$tiempo-transicion-base, box-shadow v.$tiempo-transicion-base;
+            &:focus {
+                outline: none;
+                border-color: v.$color-acento;
+                box-shadow: 0 0 8px rgba(v.$color-acento, 0.6);
+            }
+        }
+
+        textarea {
+            resize: vertical; 
+        }
+    }
+}
+
+// Grupo de Consentimiento
+.flex-consent-group {
+    display: flex;
+    align-items: center; 
+    gap: v.$espaciado-sm; 
+    margin-top: v.$espaciado-sm; 
+
+    label {
+        color: v.$color-texto-claro;
+        font-weight: v.$peso-regular; 
+        font-size: 0.9em;
+        margin: 0;
+    }
+
+    input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        min-width: 18px; 
+        background-color: v.$color-fondo-claro;
+        border: 1px solid v.$color-acento;
+        cursor: pointer;
+    }
+}
+
+
+// Botón de Envío
+.submit-button {
+    background-color: v.$color-acento;
+    color: v.$color-texto-base; 
+    padding: 12px 20px; 
+    border: none;
+    border-radius: v.$radio-borde-sm; 
+    font-size: 1.1em;
+    font-weight: v.$peso-negrita;
+    cursor: pointer;
+    transition: background-color v.$tiempo-transicion-base, transform v.$tiempo-transicion-base * 0.33;
+    margin-top: v.$espaciado-md;
+
+    // Estado Hover
+    &:hover {
+        background-color: darken(v.$color-acento, 5%); 
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(v.$color-acento, 0.5);
+    }
+}
+
+
+// Media Query 
+@include m.mobile-only {
+    .contact-form .grid-layout-2-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-wrapper {
+        padding: v.$espaciado-md;
+    }
+}
