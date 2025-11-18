@@ -1,3 +1,70 @@
+//aca va a ir todo el codigo de css y sass de mi home y su responsive
 
 @use "variables" as v;
 @use "mixins" as m;
+
+// Estilos del Body y Contenido Principal
+.home-page-index {
+    background-image: url(../assets/img/tanjiro-fondo.webp);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+#main-content {
+    padding-top: v.$padding-top-header;
+    padding-bottom: v.$espaciado-lg * 1.25;
+    min-height: calc(100vh - v.$padding-top-header); 
+    max-width: v.$ancho-max-lg; 
+    margin: 0 auto;
+    // Apariencia
+    background-color: v.$fondo-transparente-negro-bajo;
+    padding: v.$espaciado-lg v.$espaciado-md;
+    border-radius: v.$radio-borde-md;
+    margin-top: v.$padding-top-header; 
+}
+
+// Títulos Generales 
+h2 {
+    color: v.$color-acento;
+    margin-bottom: v.$espaciado-md; 
+    text-align: center;
+}
+
+// Reproductor de Audio
+.audio-player {
+    text-align: center;
+    margin-bottom: v.$espaciado-lg; 
+    padding: 15px; 
+    border: 1px solid v.$color-acento;
+    border-radius: v.$radio-borde-md * 0.8; 
+    background-color: v.$fondo-transparente-gris-claro; 
+    
+    p {
+        margin-bottom: v.$espaciado-sm;
+        font-weight: v.$peso-negrita;
+    }
+}
+
+// Contenedor de Medios 
+.media-container {
+    margin-bottom: v.$espaciado-lg; 
+    // IFRAME
+    .iframe-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; 
+        height: 0;
+        overflow: hidden;
+        margin: 0 auto; 
+        
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: v.$radio-borde-md * 0.8;
+        }
+    }
+}
