@@ -1,0 +1,38 @@
+
+@use 'variables' as v;
+
+// ITERACIÓN PRINCIPAL: clases de Margin y Padding
+@each $nivel, $valor in v.$espaciado-mapa {
+    
+    // Genera clases de Padding 
+    .p-#{$nivel} {
+        padding: $valor !important;
+    }
+
+    // Genera clases de Margin 
+    .m-#{$nivel} {
+        margin: $valor !important;
+    }
+
+    // ITERACIÓN ANIDADA: clases específicas
+
+    // Lista de propiedades y sus prefijos
+    $lados: (
+        'top': t,
+        'bottom': b,
+        'left': l,
+        'right': r,
+    );
+
+    @each $lado, $prefijo in $lados {
+        // Genera clases de Padding (pt-1, pb-2, pl-3, pr-4, etc.)
+        .p#{$prefijo}-#{$nivel} {
+            padding-#{$lado}: $valor !important;
+        }
+
+        // clases de Margin
+        .m#{$prefijo}-#{$nivel} {
+            margin-#{$lado}: $valor !important;
+        }
+    }
+}
