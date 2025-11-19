@@ -41,6 +41,7 @@ h2 {
     background-color: v.$fondo-transparente-gris-claro; 
     
     p {
+        color: v.$color-acento;
         margin-bottom: v.$espaciado-sm;
         font-weight: v.$peso-negrita;
     }
