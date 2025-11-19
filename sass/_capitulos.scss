@@ -38,15 +38,12 @@
 }
 
 // REPRODUCTOR PRINCIPAL
-
 .reproductor-section-grid {
+    @extend %card-destacada;
     display: grid;
     gap: 30px; 
     margin-bottom: v.$espaciado-lg;
     padding: v.$espaciado-md;
-    background-color: v.$color-fondo-oscuro; 
-    border-radius: v.$radio-borde-md; 
-    border: 1px solid v.$color-acento;
 
     .video-title {
         color: v.$color-acento;
@@ -101,13 +98,8 @@
 }
 
 // CARROUSEL DE EPISODIOS
-
 .list-title {
-    color: v.$color-texto-base;
-    font-size: 2em;
-    margin-bottom: v.$espaciado-md;
-    border-left: 5px solid v.$color-acento;
-    padding-left: 15px;
+    @extend %titulo-seccion-borde;
 }
 
 .episodios-carousel {
@@ -141,11 +133,7 @@
         transition: all 0.2s; 
 
         // Hover y Focus
-        &:hover, &:focus {
-            border-color: v.$color-acento;
-            background-color: v.$color-fondo-claro;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
+        @extend %hover-scale-shadow;
         }
 
         img {
