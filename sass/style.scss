@@ -4,6 +4,9 @@
 @use "variables";
 @use "mixins";
 
+// PLACEHOLDER & UTILITIES //
+@use 'utilities';
+
 // LAYOUT //
 @use "header";
 @use "footer";
