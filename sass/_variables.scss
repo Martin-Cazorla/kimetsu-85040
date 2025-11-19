@@ -42,3 +42,13 @@ $fondo-transparente-negro-alto: rgba(0, 0, 0, 0.9);
 $fondo-transparente-negro-medio: rgba(0, 0, 0, 0.75); 
 $fondo-transparente-negro-bajo: rgba(0, 0, 0, 0.6); 
 $fondo-transparente-gris-claro: rgba(255, 255, 255, 0.1); 
+
+// Mapa para generar clases utilitarias de espaciado
+$espaciado-mapa: (
+    0: 0,        
+    1: 0.25rem,  
+    2: 0.5rem,   
+    3: 1rem,     
+    4: 1.5rem,   
+    5: 3rem,     
+);
