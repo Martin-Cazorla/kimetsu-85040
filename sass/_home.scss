@@ -32,20 +32,6 @@ h2 {
 }
 
 // Reproductor de Audio
-.audio-player {
-    text-align: center;
-    margin-bottom: v.$espaciado-lg; 
-    padding: 15px; 
-    border: 1px solid v.$color-acento;
-    border-radius: v.$radio-borde-md * 0.8; 
-    background-color: v.$fondo-transparente-gris-claro; 
-    
-    p {
-        color: v.$color-acento;
-        margin-bottom: v.$espaciado-sm;
-        font-weight: v.$peso-negrita;
-    }
-}
 
 // Contenedor de Medios 
 .media-container {
@@ -68,4 +54,18 @@ h2 {
             border-radius: v.$radio-borde-md * 0.8;
         }
     }
+    .audio-player {
+        text-align: center;
+        margin-bottom: v.$espaciado-lg; 
+        padding: 15px; 
+        border: 1px solid v.$color-acento;
+        border-radius: v.$radio-borde-md * 0.8; 
+        background-color: v.$fondo-transparente-gris-claro; 
+    
+        p {
+            color: v.$color-acento;
+            margin-bottom: v.$espaciado-sm;
+            font-weight: v.$peso-negrita;
+    }
+  }
 }
