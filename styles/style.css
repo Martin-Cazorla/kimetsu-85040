@@ -139,6 +139,7 @@ h2 {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .audio-player p {
+  color: #ff4500;
   margin-bottom: 10px;
   font-weight: 700;
 }
