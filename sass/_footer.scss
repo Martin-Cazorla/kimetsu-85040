@@ -10,7 +10,6 @@
 
 // Estilo Base del Footer
 .main-footer {
-    // Apariencia
     background-color: v.$fondo-transparente-negro-alto;
     color: v.$color-texto-claro;
     padding: v.$espaciado-md;
@@ -33,7 +32,7 @@
     .social-links {
         max-width: 600px;
         margin: 0 auto; 
-        
+
         h3 {
             @extend %base-title-accent; 
             margin-bottom: v.$espaciado-sm; 
@@ -60,6 +59,10 @@
             text-decoration: none;
             border-radius: v.$radio-borde-sm;
             transition: color v.$tiempo-transicion-base, background-color v.$tiempo-transicion-base;
+            &:focus-visible {
+                outline: 2px solid v.$color-acento;
+                outline-offset: 2px;
+            }
 
             // Estado Hover
             &:hover {
@@ -75,29 +78,30 @@
     }
 }
 
-// Diseño Responsive: Tablet y Escritorio 
+// Diseño Responsive
 @include m.tablet-up { 
     .main-footer {
-        // Layout de dos columnas con Grid 
         display: grid;
         grid-template-columns: 1fr auto; 
         align-items: center; 
         padding: v.$espaciado-md v.$espaciado-lg; 
-        text-align: left; 
+        text-align: left;
 
         .footer-content {
             margin-bottom: 0; 
+            p {
+                text-align: left;
+            }
         }
 
         .social-links {
             max-width: none;
             margin: 0;
-            text-align: right; 
 
             h3 {
                 margin-top: 0; 
                 margin-bottom: v.$espaciado-sm / 2;
-                text-align: right; 
+                text-align: right;
             }
             
             ul {
