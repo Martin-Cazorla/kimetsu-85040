@@ -41,16 +41,18 @@
 
 // Estilo de Cada Tarjeta de Personaje
 .personaje-card {
-    min-height: calc(100vh - v.$espaciado-lg * 2); // 100vh - 80px
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
+    @extend %contenedor-base; 
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
-    padding: v.$espaciado-md; 
+    background-color: map-get($colores, fondo-claro);
+    
+    &__img {
+        width: 100%;
+        height: auto;
+        border-bottom: 2px solid map-get;
+    }
+}    
 
     // Clases de Fondo 
     &#tanjiro { background-image: url('../assets/img/tanjiro.jpeg'); }
