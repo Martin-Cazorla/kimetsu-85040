@@ -1,39 +1,36 @@
 //aca va a ir toso el codigo de css y sass de mi footer y su responsive//
 
-@use "variables" as v; 
+@use "variables" as v;
 @use "mixins" as m;
 
-// Placeholder para Títulos 
+// Placeholder para Títulos
 %base-title-accent {
     color: v.$color-acento;
-    margin-bottom: v.$espaciado-sm; 
+    margin-bottom: v.$espaciado-sm;
 }
 
 // Estilo Base del Footer
 .main-footer {
-    // Apariencia y Layout
-    background-color: v.$fondo-transparente-negro-alto; 
-    color: v.$color-texto-claro; 
-    padding: v.$espaciado-md; 
-    text-align: center;
+    background-color: v.$fondo-transparente-negro-alto;
+    color: v.$color-texto-claro;
+    padding: v.$espaciado-md;
     border-top: 2px solid v.$color-acento;
+    // Layout Móvil
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
 
     .footer-content {
-        margin-bottom: v.$espaciado-sm * 1.5; 
+        margin-bottom: v.$espaciado-md; 
     }
 
     // Contenedor de Enlaces Sociales
     .social-links {
         max-width: 600px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-
-        // Título "Síguenos"
+        margin: 0 auto; 
         h3 {
-            @extend %base-title-accent; // Aplica color de acento y margin
-            grid-column: 1 / -1;
+            @extend %base-title-accent; 
+            margin-bottom: v.$espaciado-sm; 
         }
 
         ul {
@@ -41,36 +38,61 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: v.$espaciado-md;
+            flex-wrap: wrap; 
         }
-        
+
         a {
-            color: v.$color-texto-base;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px; 
+            height: 40px;
+            font-size: 1.5rem;
+            color: v.$color-texto-claro;
             text-decoration: none;
+            border-radius: v.$radio-borde-sm;
             transition: color v.$tiempo-transicion-base;
-            
-            // Estado Hover (Anidamiento)
             &:hover {
-                color: v.$color-acento; 
+                color: v.$color-acento;
+                background-color: rgba(v.$color-acento, 0.1);
             }
+            // Estilos del ícono (la etiqueta <i>)
+            i {
+                line-height: 1;
         }
     }
 }
 
-// Responsive Design
 @include m.tablet-up { 
-    .social-links {
-        // Cambiar a dos columnas en dispositivos más grandes
-        grid-template-columns: auto 1fr; 
-        gap: v.$espaciado-md;
+    .main-footer {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        padding: v.$espaciado-md v.$espaciado-lg;
+        text-align: left;
 
-        h3 {
-            grid-column: 1 / 3;
+        .footer-content {
+            margin-bottom: 0; 
+            p {
+                margin: 0; 
+            }
         }
-        
-        ul {
-            // Ajustar la posición de los enlaces
-            justify-content: flex-start; 
+
+        .social-links {
+            max-width: none;
+            margin: 0;
+            text-align: right; 
+
+            h3 {
+                margin-top: 0; 
+                margin-bottom: v.$espaciado-sm / 2;
+                text-align: right; 
+            }
+            
+            ul {
+                justify-content: flex-end; 
+            }
         }
     }
 }
