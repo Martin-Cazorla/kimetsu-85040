@@ -1,5 +1,4 @@
 //aca va a ir toso el codigo de css y sass de mi footer y su responsive//
-
 @use "variables" as v;
 @use "mixins" as m;
 
@@ -11,23 +10,30 @@
 
 // Estilo Base del Footer
 .main-footer {
+    // Apariencia
     background-color: v.$fondo-transparente-negro-alto;
     color: v.$color-texto-claro;
     padding: v.$espaciado-md;
     border-top: 2px solid v.$color-acento;
-    // Layout Móvil
+
+    // Layout Móvil 
     display: flex;
     flex-direction: column;
     text-align: center; 
 
     .footer-content {
+        // En móvil
         margin-bottom: v.$espaciado-md; 
+        p {
+            margin: 0;
+        }
     }
 
     // Contenedor de Enlaces Sociales
     .social-links {
         max-width: 600px;
         margin: 0 auto; 
+        
         h3 {
             @extend %base-title-accent; 
             margin-bottom: v.$espaciado-sm; 
@@ -37,46 +43,50 @@
             list-style: none;
             padding: 0;
             display: flex;
-            justify-content: center;
-            gap: v.$espaciado-md;
+            justify-content: center; 
+            gap: v.$espaciado-md; 
             flex-wrap: wrap; 
         }
 
+        // Estilos para los enlaces
         a {
             display: inline-flex;
             justify-content: center;
             align-items: center;
             width: 40px; 
             height: 40px;
-            font-size: 1.5rem;
+            font-size: 1.5rem; 
             color: v.$color-texto-claro;
             text-decoration: none;
             border-radius: v.$radio-borde-sm;
-            transition: color v.$tiempo-transicion-base;
+            transition: color v.$tiempo-transicion-base, background-color v.$tiempo-transicion-base;
+
+            // Estado Hover
             &:hover {
                 color: v.$color-acento;
-                background-color: rgba(v.$color-acento, 0.1);
+                background-color: rgba(v.$color-acento, 0.1); 
             }
-            // Estilos del ícono (la etiqueta <i>)
+
+            // Estilos del ícono
             i {
                 line-height: 1;
+            }
         }
     }
 }
 
+// Diseño Responsive: Tablet y Escritorio 
 @include m.tablet-up { 
     .main-footer {
+        // Layout de dos columnas con Grid 
         display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: center;
-        padding: v.$espaciado-md v.$espaciado-lg;
-        text-align: left;
+        grid-template-columns: 1fr auto; 
+        align-items: center; 
+        padding: v.$espaciado-md v.$espaciado-lg; 
+        text-align: left; 
 
         .footer-content {
             margin-bottom: 0; 
-            p {
-                margin: 0; 
-            }
         }
 
         .social-links {
