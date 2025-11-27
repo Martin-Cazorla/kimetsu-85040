@@ -1,3 +1,6 @@
+@use 'variables' as v; 
+@use 'mixins' as m; 
+@use "base" as b;
 // PLACEHOLDERS
 // Estilo para contenedor base
 %contenedor-base {
@@ -6,7 +9,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 1.5rem;
 }
- 
+
 // Estilos para contenedor destacado
 %card-destacada {
     background-color: v.$color-fondo-oscuro; 

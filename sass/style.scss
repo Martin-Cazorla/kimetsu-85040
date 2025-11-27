@@ -1,10 +1,11 @@
 //archivo principal de sass//
 
 // ABSTRACT //
-@use "variables";
-@use "mixins";
+@use "variables" as v;
+@use "mixins" as m;
 
 // PLACEHOLDER & UTILITIES //
+@use "base" as b;
 @use 'utilities';
 
 // LAYOUT //

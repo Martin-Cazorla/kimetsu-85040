@@ -2,7 +2,7 @@
 
 @use "variables" as v;
 @use "mixins" as m;
-
+@use "base" as b;
 // Estilos del Body y Contenido Principal
 .contacto-page-body {
     min-height: 100vh;

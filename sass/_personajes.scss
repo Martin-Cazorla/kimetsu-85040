@@ -2,6 +2,7 @@
 
 @use "variables" as v;
 @use "mixins" as m;
+@use "base" as b;
 
 // Placeholder para Títulos
 %title-accent-style {
@@ -41,18 +42,17 @@
 
 // Estilo de Cada Tarjeta de Personaje
 .personaje-card {
-    @extend %contenedor-base; 
+    @extend b.%contenedor-base;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: map-get($colores, fondo-claro);
+    background-color: v.$color-fondo-claro;
     
     &__img {
         width: 100%;
         height: auto;
-        border-bottom: 2px solid map-get;
-    }
-}    
+        border-bottom: 2px solid v.$color-acento;
+    }   
 
     // Clases de Fondo 
     &#tanjiro { background-image: url('../assets/img/tanjiro.jpeg'); }
@@ -60,15 +60,15 @@
     &#inosuke { background-image: url('../assets/img/inozuke.jpeg'); }
     &#zenitsu { background-image: url('../assets/img/zenitsu.jpeg'); }
     &#giyu { background-image: url('../assets/img/tomioka2.jpeg'); }
-    &#kyojuro { background-image: url('../assets/img/uzui2.jpeg'); }
+    &#kyojuro { background-image: url('../assets/img/rengoku2.jpeg'); }
     &#shinobu { background-image: url('../assets/img/shinobu2.jpeg'); }
-    &#tengen { background-image: url('../assets/img/rengoku2.jpeg'); }
+    &#tengen { background-image: url('../assets/img/uzui21.jpeg'); }
     &#gyomei { background-image: url('../assets/img/gyomei2.jpeg'); }
     &#sanemi { background-image: url('../assets/img/sanemi2.jpeg'); }
     &#muichiro { background-image: url('../assets/img/tokito2.jpeg'); }
     &#mitsuri { background-image: url('../assets/img/mitsuri2.jpeg'); }
     &#obanai { background-image: url('../assets/img/iguro2.jpeg'); }
-
+} 
 // Contenedor de la Ficha
 .personaje-content-wrapper {
     background-color: v.$fondo-transparente-negro-medio; 
