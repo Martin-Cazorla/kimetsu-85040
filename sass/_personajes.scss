@@ -2,7 +2,6 @@
 
 @use "variables" as v;
 @use "mixins" as m;
-@use "base" as b;
 
 // Placeholder para Títulos
 %title-accent-style {
@@ -42,7 +41,7 @@
 
 // Estilo de Cada Tarjeta de Personaje
 .personaje-card {
-    @extend b.%contenedor-base;
+    @extend %contenedor-base;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +64,7 @@
     &#tengen { background-image: url('../assets/img/uzui21.jpeg'); }
     &#gyomei { background-image: url('../assets/img/gyomei2.jpeg'); }
     &#sanemi { background-image: url('../assets/img/sanemi2.jpeg'); }
-    &#muichiro { background-image: url('../assets/img/tokito2.jpeg'); }
+    &#muichiro { background-image: url('../assets/img/muichiro2.jpeg'); }
     &#mitsuri { background-image: url('../assets/img/mitsuri2.jpeg'); }
     &#obanai { background-image: url('../assets/img/iguro2.jpeg'); }
 } 
