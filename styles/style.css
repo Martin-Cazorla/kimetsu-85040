@@ -1,7 +1,7 @@
 /* Error: The target selector was not found.
  * Use "@extend %contenedor-base !optional" to avoid this error.
  *    ,
- * 44 |     @extend %contenedor-base; 
+ * 44 |     @extend %contenedor-base;
  *    |     ^^^^^^^^^^^^^^^^^^^^^^^^
  *    '
  *   sass\_personajes.scss 44:5  root stylesheet */
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: The target selector was not found.\aUse "@extend %contenedor-base !optional" to avoid this error.\a    \2577 \a 44 \2502      @extend %contenedor-base; \d\a    \2502      ^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\_personajes.scss 44:5  root stylesheet';
+  content: 'Error: The target selector was not found.\aUse "@extend %contenedor-base !optional" to avoid this error.\a    \2577 \a 44 \2502      @extend %contenedor-base;\d\a    \2502      ^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\_personajes.scss 44:5  root stylesheet';
 }
