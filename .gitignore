@@ -8,3 +8,9 @@ npm-debug.log
 Thumbs.db
 
 .vscode/
+
+/sass/**/*.css
+/sass/**/*.css.map
+
+/css/**/*.css
+/css/**/*.css.map
