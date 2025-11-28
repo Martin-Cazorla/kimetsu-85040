@@ -1,9 +1,42 @@
 //aca va a ir todo el codigo de css y sass de mi capitulo y su responsive
-
 @use "variables" as v; 
 @use "mixins" as m;
 
-//  Estilos Globales de la Página
+// ----------------------------------------------------
+// 1. PLACEHOLDERS
+// ----------------------------------------------------
+
+// Estilos para contenedor destacado 
+%card-destacada {
+    background-color: v.$color-fondo-oscuro; 
+    border-radius: v.$radio-borde-md; 
+    border: 1px solid v.$color-acento;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+// Estilo para títulos de sección 
+%titulo-seccion-borde {
+    color: v.$color-texto-base;
+    font-size: 2em;
+    margin-bottom: v.$espaciado-md;
+    border-left: 5px solid v.$color-acento;
+    padding-left: 15px;
+}
+
+// Estilo de efecto hover con sombra y desplazamiento 
+%hover-scale-shadow {
+    transition: all 0.2s ease;
+    &:hover, &:focus {
+        border-color: v.$color-acento;
+        background-color: v.$color-fondo-claro;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
+    }
+}
+
+// ----------------------------------------------------
+// 2. ESTILOS GLOBALES DE LA PÁGINA
+// ----------------------------------------------------
 .capitulos-page-body {
     background-image: url(../assets/img/portada-contacto.jpg);
     background-size: cover;
@@ -20,7 +53,7 @@
     padding-right: v.$espaciado-md; 
 }
 
-// Introducción (Títulos)
+// Introducción 
 .page-intro {
     text-align: center;
     margin-bottom: 30px; 
@@ -37,9 +70,11 @@
     }
 }
 
-// REPRODUCTOR PRINCIPAL
+// ----------------------------------------------------
+// 3. REPRODUCTOR PRINCIPAL
+// ----------------------------------------------------
 .reproductor-section-grid {
-    @extend %card-destacada;
+    @extend %card-destacada; 
     display: grid;
     gap: 30px; 
     margin-bottom: v.$espaciado-lg;
@@ -97,9 +132,11 @@
     }
 }
 
-// CARROUSEL DE EPISODIOS
+// ----------------------------------------------------
+// 4. CARROUSEL DE EPISODIOS
+// ----------------------------------------------------
 .list-title {
-    @extend %titulo-seccion-borde;
+    @extend %titulo-seccion-borde; 
 }
 
 .episodios-carousel {
@@ -134,6 +171,10 @@
 
         // Hover y Focus
         @extend %hover-scale-shadow;
+        &:hover, &:focus {
+            border-color: v.$color-acento;
+            background-color: v.$color-fondo-claro;
+        }
 
         img {
             width: 100%;
@@ -165,8 +206,9 @@
     background-color: v.$color-fondo-claro;
 }
 
-// MEDIA QUERY (MOBILE / TABLET)
-
+// ----------------------------------------------------
+// 5. MEDIA QUERY (MOBILE / TABLET)
+// ----------------------------------------------------
 @include m.desktop-small-up { 
     .reproductor-section-grid {
         grid-template-columns: 1fr; 

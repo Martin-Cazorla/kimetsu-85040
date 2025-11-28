@@ -1,35 +1,13 @@
 @use 'variables' as v; 
 @use 'mixins' as m; 
-@use "base" as b;
+// ----------------------------------------------------
+// PLACEHOLDERS LOCALES 
+// ----------------------------------------------------
 
-// PLACEHOLDERS
 
-// Estilos comunes para contenedores destacados
-%card-destacada {
-    border-radius: v.$radio-borde-md; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-// Estilos comunes para títulos de sección
-%titulo-seccion-borde {
-    color: v.$color-texto-base;
-    margin-bottom: v.$espaciado-md;
-    border-left: 5px solid v.$color-acento;
-    padding-left: 15px;
-}
-
-// Estilos comunes de efecto hover 
-%hover-scale-shadow {
-    &:hover, &:focus {
-        border-color: v.$color-acento;
-        background-color: v.$color-fondo-claro;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
-    }
-}
-
+// ----------------------------------------------------
 // ITERACIÓN PRINCIPAL: clases de Margin y Padding
+// ----------------------------------------------------
 @each $nivel, $valor in v.$espaciado-mapa {
     
     // Genera clases de Padding 
@@ -42,7 +20,7 @@
         margin: $valor !important;
     }
 
-    // ITERACIÓN ANIDADA: clases específicas
+    // ITERACIÓN ANIDADA
 
     // Lista de propiedades y sus prefijos
     $lados: (
@@ -53,7 +31,7 @@
     );
 
     @each $lado, $prefijo in $lados {
-        // Genera clases de Padding (pt-1, pb-2, pl-3, pr-4, etc.)
+        // clases de Padding 
         .p#{$prefijo}-#{$nivel} {
             padding-#{$lado}: $valor !important;
         }

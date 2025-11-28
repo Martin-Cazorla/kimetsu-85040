@@ -1,19 +1,25 @@
-//archivo principal de sass//
+// archivo principal de sass//
 
-// ABSTRACT //
+// ----------------------------------------------------
+// 1. ABSTRACT 
+// ----------------------------------------------------
 @use "variables" as v;
 @use "mixins" as m;
 
-// PLACEHOLDER & UTILITIES //
-@use "base";
-@use 'utilities';
+// ----------------------------------------------------
+// 2. UTILITIES 
+@use "utilities";
 
-// LAYOUT //
+// ----------------------------------------------------
+// 3. LAYOUT 
+// ----------------------------------------------------
 @use "header";
 @use "footer";
 @use "home";
 
-// PAGES //
+// ----------------------------------------------------
+// 4. PAGES 
+// ----------------------------------------------------
 @use "capitulos";
 @use "personajes";
 @use "historia";
