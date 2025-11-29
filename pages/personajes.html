@@ -1,368 +1,343 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/style.css">
-    <title>Personajes - Kimetsu no Yaiba</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes - Kimetsu no Yaiba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/style.css"> 
 </head>
-
 <body class="personajes-page-body">
 
-    <header class="main-header">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.9);">
-            <div class="container-fluid">
-            
-                <a class="navbar-brand" href="../index.html" aria-label="Ir a la página de inicio">
-                    <img src="../assets/img/logo-kimetsu-2.jpg" alt="Logo de Kimetsu no Yaiba" style="height: 50px;">
-                </a>
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.9);">
+            <div class="container-fluid">
+            
+                <a class="navbar-brand" href="../index.html" aria-label="Ir a la página de inicio">
+                    <img src="../assets/img/logo-kimetsu-2.jpg" alt="Logo de Kimetsu no Yaiba" style="height: 50px;">
+                </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./capitulos.html">Capítulos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./personajes.html">Personajes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./historia.html">Historia</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./capitulos.html">Capítulos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./personajes.html">Personajes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./historia.html">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <main class="personajes-page-content">
-        <hgroup class="page-intro">
-            <h2>Cuerpo de Exterminio de Demonios</h2>
-            <p>Conoce a los personajes clave en la lucha contra Muzan Kibutsuji.</p>
-        </hgroup>
+    <main class="personajes-page-content">
+        <hgroup class="page-intro">
+            <h2>Cuerpo de Exterminio de Demonios</h2>
+            <p>Conoce a los personajes clave en la lucha contra Muzan Kibutsuji.</p>
+        </hgroup>
 
-        <div id="personajesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true"> 
-            
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="11" aria-label="Slide 12"></button>
-                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="12" aria-label="Slide 13"></button>
-            </div>
+        <div id="personajesCarousel" class="carousel slide" data-bs-ride="carousel">
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1: Tanjiro Kamado"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="1" aria-label="Slide 2: Nezuko Kamado"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="2" aria-label="Slide 3: Inosuke Hashibira"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="3" aria-label="Slide 4: Zenitsu Agatsuma"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="4" aria-label="Slide 5: Giyū Tomioka - Pilar del Agua"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="5" aria-label="Slide 6: Kyōjurō Rengoku - Pilar de la Llama"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="6" aria-label="Slide 7: Shinobu Kochō - Pilar del Insecto"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="7" aria-label="Slide 8: Tengen Uzui - Pilar del Sonido"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="8" aria-label="Slide 9: Gyōmei Himejima - Pilar de la Roca"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="9" aria-label="Slide 10: Sanemi Shinazugawa - Pilar del Viento"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="10" aria-label="Slide 11: Muichirō Tokitō - Pilar de la Niebla"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="11" aria-label="Slide 12: Mitsuri Kanroji - Pilar del Amor"></button>
+                <button type="button" data-bs-target="#personajesCarousel" data-bs-slide-to="12" aria-label="Slide 13: Obanai Iguro - Pilar de la Serpiente"></button>
+            </div>
 
 
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <section id="tanjiro" class="personaje-card" aria-labelledby="tanjiro-heading">
-                                                <div class="personaje-card__img"></div>
-                        
-                        <div class="personaje-content-wrapper">
-                            <h3 id="tanjiro-heading" class="personaje-title">Tanjiro Kamado</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/tanjiro-perfil.jpeg" alt="Retrato de Tanjiro Kamado con su Haori a cuadros">
-                                    <figcaption>Protagonista. Respiración del Agua y Solar.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>Protagonista y Cazador de Demonios. Su misión es devolver la humanidad a su hermana, Nezuko, tras el ataque de Muzan Kibutsuji que diezmó a su familia. Entrenado por Urokodaki, domina la Respiración del Agua y, posteriormente, el Hinokami Kagura. Demuestra una naturaleza amable y una gran determinación en batalla.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <section id="tanjiro" class="personaje-card" aria-labelledby="tanjiro-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="tanjiro-heading" class="personaje-title">Tanjiro Kamado</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/tanjiro-perfil.jpeg" alt="Retrato de Tanjiro Kamado con su Haori a cuadros">
+                                    <figcaption>Cazador de Demonios. Respiración del Agua.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>Protagonista y Cazador de Demonios. Su misión es devolver la humanidad a su hermana, Nezuko, tras el ataque de Muzan Kibutsuji que diezmó a su familia. Entrenado por Urokodaki, domina la Respiración del Agua y, posteriormente, el Hinokami Kagura. Demuestra una naturaleza amable y una gran determinación en batalla.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                <div class="carousel-item">
-                    <section id="nezuko" class="personaje-card" aria-labelledby="nezuko-heading">
-                                                <div class="personaje-card__img"></div>
-                        
-                        <div class="personaje-content-wrapper">
-                            <h3 id="nezuko-heading" class="personaje-title">Nezuko Kamado</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/nezuko-perfil.jpeg" alt="Nezuko Kamado con su caña de bambú en la boca.">
-                                    <figcaption>Hermana menor de Tanjiro. Demonio.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>Hermana menor de Tanjirō y una de las únicas supervivientes del ataque demoníaco familiar. Se transformó en demonio, pero retuvo emociones humanas y una mente semi-intacta. Por condicionamiento, protege a los humanos y se recupera durmiendo. Su Arte de Sangre es la Explosión de Sangre (fuego), y logra volverse inmune al sol.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
+                <div class="carousel-item">
+                    <section id="nezuko" class="personaje-card" aria-labelledby="nezuko-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="nezuko-heading" class="personaje-title">Nezuko Kamado</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/nezuko-perfil.jpeg" alt="Nezuko Kamado con su caña de bambú en la boca.">
+                                    <figcaption>Hermana menor de Tanjiro. Demonio.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>Hermana menor de Tanjirō y una de las únicas supervivientes del ataque demoníaco familiar. Se transformó en demonio, pero retuvo emociones humanas y una mente semi-intacta. Por condicionamiento, protege a los humanos y se recupera durmiendo. Su Arte de Sangre es la Explosión de Sangre (fuego), y logra volverse inmune al sol.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                <div class="carousel-item">
-                    <section id="inosuke" class="personaje-card" aria-labelledby="inosuke-heading">
-                                                <div class="personaje-card__img"></div>
+                <div class="carousel-item">
+                    <section id="inosuke" class="personaje-card" aria-labelledby="inosuke-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="inosuke-heading" class="personaje-title">Inosuke Hashibira</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/inozuke-perfil.jpeg" alt="Inosuke Hashibira con su máscara de jabalí y espadas mellizas.">
+                                    <figcaption>Respiración de la Bestia. Criado por jabalíes.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>Un guerrero formidable que utiliza la Respiración de la Bestia, un estilo caótico y autodidacta. Fue criado por jabalíes en la montaña, lo que explica su máscara y su actitud salvaje. Aunque impulsivo, posee una fuerza bruta notable y una intuición aguda en el combate.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                        <div class="personaje-content-wrapper">
-                            <h3 id="inosuke-heading" class="personaje-title">Inosuke Hashibira</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/inozuke-perfil.jpeg" alt="Inosuke Hashibira con su máscara de jabalí y espadas mellizas.">
-                                    <figcaption>Respiración de la Bestia. Criado por jabalíes.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>Un guerrero formidable que utiliza la Respiración de la Bestia, un estilo caótico y autodidacta. Fue criado por jabalíes en la montaña, lo que explica su máscara y su actitud salvaje. Aunque impulsivo, posee una fuerza bruta notable y una intuición aguda en el combate.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
+                <div class="carousel-item">
+                    <section id="zenitsu" class="personaje-card" aria-labelledby="zenitsu-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="zenitsu-heading" class="personaje-title">Zenitsu Agatsuma</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/zanitsu-perfil.jpeg" alt="Zenitsu Agatsuma con su Haori amarillo y el cabello rubio.">
+                                    <figcaption>Respiración del Rayo. Tiende a ser miedoso.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>Un experto espadachín del Cuerpo de Cazadores de Demonios, destacado por su feroz estilo de combate basado en la Respiración del Rayo. Tiende a ser impaciente y ruidoso, pero es extremadamente leal a sus amigos. Su objetivo es alcanzar el rango de Pilar para honrar a su mentor.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                <div class="carousel-item">
-                    <section id="zenitsu" class="personaje-card" aria-labelledby="zenitsu-heading">
-                                                <div class="personaje-card__img"></div>
+                <div class="carousel-item">
+                    <section id="giyu" class="personaje-card" aria-labelledby="giyu-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="giyu-heading" class="personaje-title">Giyū Tomioka</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/tomioka-perfil.jpeg" alt="Giyu Tomioka, el Pilar del Agua, con expresión seria.">
+                                    <figcaption>Pilar del Agua. Serio y reservado.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>El Pilar del Agua. Es un hombre serio y reservado que fue el primero en reconocer el potencial de Tanjiro y la humanidad de Nezuko. Su habilidad en la Respiración del Agua es de las mejores, manteniendo la calma incluso en las situaciones más desesperadas.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                        <div class="personaje-content-wrapper">
-                            <h3 id="zenitsu-heading" class="personaje-title">Zenitsu Agatsuma</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/zanitsu-perfil.jpeg" alt="Zenitsu Agatsuma con su Haori amarillo y el cabello rubio.">
-                                    <figcaption>Respiración del Rayo. Tiende a ser miedoso.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>Un experto espadachín del Cuerpo de Cazadores de Demonios, destacado por su feroz estilo de combate basado en la Respiración del Rayo. Tiende a ser impaciente y ruidoso, pero es extremadamente leal a sus amigos. Su objetivo es alcanzar el rango de Pilar para honrar a su mentor.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
+                <div class="carousel-item">
+                    <section id="kyojuro" class="personaje-card" aria-labelledby="kyojuro-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="kyojuro-heading" class="personaje-title">Kyōjurō Rengoku</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/rengoku-perfil.jpeg" alt="Kyojuro Rengoku, el Pilar de la Llama, con su distintivo cabello rojo y amarillo.">
+                                    <figcaption>Pilar de la Llama. Optimista y dedicado.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>El Pilar de la Llama. Es un espadachín optimista y lleno de energía, respetado por su estricto código moral y su inquebrantable dedicación a proteger a los inocentes. Su dominio de las técnicas de fuego es insuperable, inspirando a sus compañeros en cada enfrentamiento.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                <div class="carousel-item">
-                    <section id="giyu" class="personaje-card" aria-labelledby="giyu-heading">
-                                                <div class="personaje-card__img"></div>
+                <div class="carousel-item">
+                    <section id="shinobu" class="personaje-card" aria-labelledby="shinobu-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="shinobu-heading" class="personaje-title">Shinobu Kochō</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/shinobu-perfil.jpeg" alt="Shinobu Kocho, el Pilar del Insecto, con su uniforme y haori de mariposa.">
+                                    <figcaption>Pilar del Insecto. Experta en venenos.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>Una médica y experta en venenos, es el Pilar del Insecto. Es tranquila y siempre sonriente, pero su fuerza reside en su velocidad y sus técnicas únicas de envenenamiento, ya que carece de la fuerza física para decapitar a los demonios. Busca venganza por la pérdida de su hermana.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                        <div class="personaje-content-wrapper">
-                            <h3 id="giyu-heading" class="personaje-title">Giyū Tomioka</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/tomioka-perfil.jpeg" alt="Giyu Tomioka, el Pilar del Agua, con expresión seria.">
-                                    <figcaption>Pilar del Agua. Serio y reservado.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>El Pilar del Agua. Es un hombre serio y reservado que fue el primero en reconocer el potencial de Tanjiro y la humanidad de Nezuko. Su habilidad en la Respiración del Agua es de las mejores, manteniendo la calma incluso en las situaciones más desesperadas.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
+                <div class="carousel-item">
+                    <section id="tengen" class="personaje-card" aria-labelledby="tengen-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="tengen-heading" class="personaje-title">Tengen Uzui</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/uzui-perfil.jpeg" alt="Tengen Uzui, el Pilar del Sonido, con sus accesorios extravagantes.">
+                                    <figcaption>Pilar del Sonido. Extravagante ex-Ninja.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>El Pilar del Sonido. Un extravagante ex-Ninja conocido por su llamativo estilo y su afán por la "Esplendidez". Utiliza explosivos y espadas gemelas únicas en su lucha contra los demonios. Valora la vida de sus tres esposas por encima de todo.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                <div class="carousel-item">
-                    <section id="kyojuro" class="personaje-card" aria-labelledby="kyojuro-heading">
-                                                <div class="personaje-card__img"></div>
+                <div class="carousel-item">
+                    <section id="gyomei" class="personaje-card" aria-labelledby="gyomei-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="gyomei-heading" class="personaje-title">Gyōmei Himejima</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/gyomei-perfil.jpeg" alt="Gyomei Himejima, el Pilar de la Roca, con su atuendo de monje.">
+                                    <figcaption>Pilar de la Roca. El más fuerte.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>El Pilar de la Roca. Es el más grande y físicamente fuerte de todos los Pilares. Ciego de nacimiento, utiliza un arma atípica (bola con púas y hacha) y la Respiración de Roca. Es un personaje profundamente emotivo y devoto, a menudo llorando por los caídos.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                        <div class="personaje-content-wrapper">
-                            <h3 id="kyojuro-heading" class="personaje-title">Kyōjurō Rengoku</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/rengoku-perfil.jpeg" alt="Kyojuro Rengoku, el Pilar de la Llama, con su distintivo cabello rojo y amarillo.">
-                                    <figcaption>Pilar de la Llama. Optimista y dedicado.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>El Pilar de la Llama. Es un espadachín optimista y lleno de energía, respetado por su estricto código moral y su inquebrantable dedicación a proteger a los inocentes. Su dominio de las técnicas de fuego es insuperable, inspirando a sus compañeros en cada enfrentamiento.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
+                <div class="carousel-item">
+                    <section id="sanemi" class="personaje-card" aria-labelledby="sanemi-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="sanemi-heading" class="personaje-title">Sanemi Shinazugawa</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/sanemi-perfil.jpeg" alt="Sanemi Shinazugawa, el Pilar del Viento, con cicatrices y expresión agresiva.">
+                                    <figcaption>Pilar del Viento. Volátil y agresivo.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>El Pilar del Viento. Un guerrero volátil y agresivo que desprecia profundamente a los demonios. Su estilo de combate es implacable, y su Respiración de Viento es tan violenta como su temperamento. Su pasado trágico justifica su odio hacia estas criaturas.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                <div class="carousel-item">
-                    <section id="shinobu" class="personaje-card" aria-labelledby="shinobu-heading">
-                                                <div class="personaje-card__img"></div>
+                <div class="carousel-item">
+                    <section id="muichiro" class="personaje-card" aria-labelledby="muichiro-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="muichiro-heading" class="personaje-title">Muichirō Tokitō</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/tokito-perfil.jpeg" alt="Muichirō Tokitō, el Pilar de la Niebla.">
+                                    <figcaption>Pilar de la Niebla. Un prodigio en la esgrima.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>El Pilar de la Niebla. Un prodigio en la esgrima, es el miembro más joven de los Pilares. Su personalidad es inicialmente distante y olvidadiza, pero recupera su determinación al recordar su pasado. Su Respiración de Niebla es rápida y confusa para los demonios.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                        <div class="personaje-content-wrapper">
-                            <h3 id="shinobu-heading" class="personaje-title">Shinobu Kochō</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/shinobu-perfil.jpeg" alt="Shinobu Kocho, el Pilar del Insecto, con su uniforme y haori de mariposa.">
-                                    <figcaption>Pilar del Insecto. Experta en venenos.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>Una médica y experta en venenos, es el Pilar del Insecto. Es tranquila y siempre sonriente, pero su fuerza reside en su velocidad y sus técnicas únicas de envenenamiento, ya que carece de la fuerza física para decapitar a los demonios. Busca venganza por la pérdida de su hermana.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
+                <div class="carousel-item">
+                    <section id="mitsuri" class="personaje-card" aria-labelledby="mitsuri-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="mitsuri-heading" class="personaje-title">Mitsuri Kanroji</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/mitsuri-perfil.jpeg" alt="Mitsuri Kanroji, el Pilar del Amor, con su cabello de colores.">
+                                    <figcaption>Pilar del Amor. Pasional y alegre.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>El Pilar del Amor. Una espadachina apasionada y alegre que utiliza una katana flexible y la Respiración del Amor, un estilo ágil y elegante. Se unió al Cuerpo de Cazadores de Demonios con la esperanza de encontrar un compañero digno de su gran apetito y fuerza.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
-                <div class="carousel-item">
-                    <section id="tengen" class="personaje-card" aria-labelledby="tengen-heading">
-                                                <div class="personaje-card__img"></div>
+                <div class="carousel-item">
+                    <section id="obanai" class="personaje-card" aria-labelledby="obanai-heading">
+                        <div class="personaje-content-wrapper">
+                            <h3 id="obanai-heading" class="personaje-title">Obanai Iguro</h3>
+                            <article class="personaje-details">
+                                <figure class="personaje-image">
+                                    <img src="../assets/img/iguro-perfil.jpeg" alt="Obanai Iguro, el Pilar de la Serpiente, con su venda en la boca y su serpiente Kaburamaru.">
+                                    <figcaption>Pilar de la Serpiente. Severo y crítico.</figcaption>
+                                </figure>
+                                <div class="personaje-description">
+                                    <p>El Pilar de la Serpiente. Un espadachín pequeño y severo que siempre está acompañado por su serpiente, Kaburamaru. Es muy crítico con los demás y protector de sus aliados cercanos. Utiliza un nichirin curvado y la Respiración de la Serpiente.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
 
-                        <div class="personaje-content-wrapper">
-                            <h3 id="tengen-heading" class="personaje-title">Tengen Uzui</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/uzui-perfil.jpeg" alt="Tengen Uzui, el Pilar del Sonido, con sus accesorios extravagantes.">
-                                    <figcaption>Pilar del Sonido. Extravagante ex-Ninja.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>El Pilar del Sonido. Un extravagante ex-Ninja conocido por su llamativo estilo y su afán por la "Esplendidez". Utiliza explosivos y espadas gemelas únicas en su lucha contra los demonios. Valora la vida de sus tres esposas por encima de todo.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#personajesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#personajesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
 
-                <div class="carousel-item">
-                    <section id="gyomei" class="personaje-card" aria-labelledby="gyomei-heading">
-                                                <div class="personaje-card__img"></div>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Cazorla Studio. Todos los derechos reservados.</p>
+            <p>Contacto: martincazorlasota@gmail.com</p>
+        </div>
 
-                        <div class="personaje-content-wrapper">
-                            <h3 id="gyomei-heading" class="personaje-title">Gyōmei Himejima</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/gyomei-perfil.jpeg" alt="Gyomei Himejima, el Pilar de la Roca, con su atuendo de monje.">
-                                    <figcaption>Pilar de la Roca. El más fuerte.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>El Pilar de la Roca. Es el más grande y físicamente fuerte de todos los Pilares. Ciego de nacimiento, utiliza un arma atípica (bola con púas y hacha) y la Respiración de Roca. Es un personaje profundamente emotivo y devoto, a menudo llorando por los caídos.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
+        <div class="social-links">
+            <h3>Síguenos</h3>
+            <ul>
+                <li>
+                    <a href="https://www3.animeflv.net/anime/kimetsu-no-yaiba" target="_blank" rel="noopener noreferrer">Animeflv</a>
+                </li>
+                <li>
+                    <a href="URL-CAZORLAIG" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Cazorla Studio">
+                        <span class="icon-instagram" aria-hidden="true"></span> Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="URL-CAZORLAFACEBOOK" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Cazorla Studio">
+                        <span class="icon-facebook" aria-hidden="true"></span> Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="URL-CAZORLAX" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) de Cazorla Studio">
+                        <span class="icon-x" aria-hidden="true"></span> X
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
-                <div class="carousel-item">
-                    <section id="sanemi" class="personaje-card" aria-labelledby="sanemi-heading">
-                                                <div class="personaje-card__img"></div>
-
-                        <div class="personaje-content-wrapper">
-                            <h3 id="sanemi-heading" class="personaje-title">Sanemi Shinazugawa</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/sanemi-perfil.jpeg" alt="Sanemi Shinazugawa, el Pilar del Viento, con cicatrices y expresión agresiva.">
-                                    <figcaption>Pilar del Viento. Volátil y agresivo.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>El Pilar del Viento. Un guerrero volátil y agresivo que desprecia profundamente a los demonios. Su estilo de combate es implacable, y su Respiración de Viento es tan violenta como su temperamento. Su pasado trágico justifica su odio hacia estas criaturas.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="carousel-item">
-                    <section id="muichiro" class="personaje-card" aria-labelledby="muichiro-heading">
-                                                <div class="personaje-card__img"></div>
-
-                        <div class="personaje-content-wrapper">
-                            <h3 id="muichiro-heading" class="personaje-title">Muichirō Tokitō</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/tokito-perfil.jpeg" alt="Muichirō Tokitō, el Pilar de la Niebla.">
-                                    <figcaption>Pilar de la Niebla. Un prodigio en la esgrima.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>El Pilar de la Niebla. Un prodigio en la esgrima, es el miembro más joven de los Pilares. Su personalidad es inicialmente distante y olvidadiza, pero recupera su determinación al recordar su pasado. Su Respiración de Niebla es rápida y confusa para los demonios.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="carousel-item">
-                    <section id="mitsuri" class="personaje-card" aria-labelledby="mitsuri-heading">
-                                                <div class="personaje-card__img"></div>
-
-                        <div class="personaje-content-wrapper">
-                            <h3 id="mitsuri-heading" class="personaje-title">Mitsuri Kanroji</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/mitsuri-perfil.jpeg" alt="Mitsuri Kanroji, el Pilar del Amor, con su cabello de colores.">
-                                    <figcaption>Pilar del Amor. Pasional y alegre.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>El Pilar del Amor. Una espadachina apasionada y alegre que utiliza una katana flexible y la Respiración del Amor, un estilo ágil y elegante. Se unió al Cuerpo de Cazadores de Demonios con la esperanza de encontrar un compañero digno de su gran apetito y fuerza.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="carousel-item">
-                    <section id="obanai" class="personaje-card" aria-labelledby="obanai-heading">
-                                                <div class="personaje-card__img"></div>
-
-                        <div class="personaje-content-wrapper">
-                            <h3 id="obanai-heading" class="personaje-title">Obanai Iguro</h3>
-                            <article class="personaje-details">
-                                <figure class="personaje-image">
-                                    <img src="../assets/img/iguro-perfil.jpeg" alt="Obanai Iguro, el Pilar de la Serpiente, con su venda en la boca y su serpiente Kaburamaru.">
-                                    <figcaption>Pilar de la Serpiente. Severo y crítico.</figcaption>
-                                </figure>
-                                <div class="personaje-description">
-                                    <p>El Pilar de la Serpiente. Un espadachín pequeño y severo que siempre está acompañado por su serpiente, Kaburamaru. Es muy crítico con los demás y protector de sus aliados cercanos. Utiliza un nichirin curvado y la Respiración de la Serpiente.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-                </div>
-
-            </div>             <button class="carousel-control-prev" type="button" data-bs-target="#personajesCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#personajesCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
-
-    </main>
-
-    <footer class="main-footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Cazorla Studio. Todos los derechos reservados.</p>
-            <p>Contacto: martincazorlasota@gmail.com</p>
-        </div>
-
-        <div class="social-links">
-            <h3>Síguenos</h3>
-            <ul>
-                <li>
-                    <a href="https://www3.animeflv.net/anime/kimetsu-no-yaiba" target="_blank" rel="noopener noreferrer">Animeflv</a>
-                </li>
-                <li>
-                    <a href="URL-CAZORLAIG" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Cazorla Studio">
-                        <span class="icon-instagram" aria-hidden="true"></span> Instagram
-                    </a>
-                </li>
-                <li>
-                    <a href="URL-CAZORLAFACEBOOK" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Cazorla Studio">
-                        <span class="icon-facebook" aria-hidden="true"></span> Facebook
-                    </a>
-                </li>
-                <li>
-                    <a href="URL-CAZORLAX" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) de Cazorla Studio">
-                        <span class="icon-x" aria-hidden="true"></span> X
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
-
 </html>

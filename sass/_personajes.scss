@@ -1,213 +1,199 @@
 //aca va a ir todo el codigo de css y sass de mi personajes y su responsive
-@use "variables" as v; 
-@use "mixins" as m;    
-// ----------------------------------------------------
-// 1. PLACEHOLDERS 
-// ----------------------------------------------------
-
-// Estilo para contenedor base
-%contenedor-base {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-}
-
-// Estilo de efecto hover con sombra y desplazamiento
-%hover-scale-shadow {
-    transition: all 0.3s ease;
-    &:hover, &:focus {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
-    }
-}
-
-// Placeholder para Títulos 
-%title-accent-style {
-    color: v.$color-acento;
-    font-size: 2.5em;
-    margin-bottom: v.$espaciado-sm; 
-}
+@use 'variables' as v;
+@use 'mixins' as m;
 
 // ----------------------------------------------------
-// 2. ESTILOS GLOBALES Y CONTENIDO DE PÁGINA
+// ESTILOS PÁGINA DE PERSONAJES 
 // ----------------------------------------------------
+
+/* Estilos de la página */
 .personajes-page-body {
-    min-height: 100vh;
-    background-color: v.$color-fondo-base; 
+    min-height: 100vh; 
+    background-color: v.$color-fondo-base;
 }
 
+/* Contenido Principal */
 .personajes-page-content {
-    padding-top: v.$padding-top-header + v.$espaciado-lg; 
-    padding-bottom: v.$espaciado-lg; 
+    padding-top: v.$padding-top-header; 
+    padding-bottom: v.$espaciado-lg;
     max-width: 100%;
     margin: 0 auto;
-}
 
-.page-intro {
-    text-align: center;
-    margin: 0 auto calc(v.$espaciado-md * 1.5) auto;
-    padding: 0 v.$espaciado-md; 
-    max-width: v.$ancho-max-xl;
-
-    h2 {
-        @extend %title-accent-style; 
-    }
-
-    p {
-        color: v.$color-texto-claro; 
-        font-size: 1.1em;
-    }
-}
-
-// ----------------------------------------------------
-// 3. ESTILO DE CADA TARJETA DE PERSONAJE
-// ----------------------------------------------------
-.personaje-card {
-    @extend %contenedor-base; 
-    @extend %hover-scale-shadow;
-    background-color: v.$color-fondo-claro;
-    &:hover, &:focus {
-        border-color: v.$color-acento;
-        background-color: v.$color-fondo-claro;
-    }
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-
-    &__img {
-        width: 100%;
-        height: 250px; 
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        border-bottom: 2px solid v.$color-acento;
-    }  
-
-    // Clases de Fondo
-    &#tanjiro .personaje-card__img { background-image: url('../assets/img/tanjiro.jpeg'); }
-    &#nezuko .personaje-card__img { background-image: url('../assets/img/nezuko.jpeg'); }
-    &#inosuke .personaje-card__img { background-image: url('../assets/img/inozuke.jpeg'); }
-    &#zenitsu .personaje-card__img { background-image: url('../assets/img/zenitsu.jpeg'); }
-    &#giyu .personaje-card__img { background-image: url('../assets/img/tomioka2.jpeg'); }
-    &#kyojuro .personaje-card__img { background-image: url('../assets/img/rengoku2.jpeg'); }
-    &#shinobu .personaje-card__img { background-image: url('../assets/img/shinobu2.jpeg'); }
-    &#tengen .personaje-card__img { background-image: url('../assets/img/uzui21.jpeg'); }
-    &#gyomei .personaje-card__img { background-image: url('../assets/img/gyomei2.jpeg'); }
-    &#sanemi .personaje-card__img { background-image: url('../assets/img/sanemi2.jpeg'); }
-    &#muichiro .personaje-card__img { background-image: url('../assets/img/muichiro2.jpeg'); }
-    &#mitsuri .personaje-card__img { background-image: url('../assets/img/mitsuri2.jpeg'); }
-    &#obanai .personaje-card__img { background-image: url('../assets/img/iguro2.jpeg'); }
-} 
-
-
-// ----------------------------------------------------
-// 4. CONTENEDOR DE LA FICHA 
-// ----------------------------------------------------
-.personaje-content-wrapper {
-    background-color: v.$fondo-transparente-negro-medio; 
-    padding: calc(v.$espaciado-md * 1.5); 
-    border-radius: v.$radio-borde-md; 
-    max-width: 90%; 
-    margin-top: v.$espaciado-md; 
-    border: 2px solid v.$color-acento;
-    
-    .personaje-title {
-        color: v.$color-acento;
+    /* Título y Subtítulo */
+    .page-intro {
         text-align: center;
-        font-size: 2em;
-        margin-bottom: v.$espaciado-md;
-        text-transform: uppercase;
-    }
+        margin: 0 auto v.$espaciado-lg auto;
+        padding: 0 v.$espaciado-md;
+        max-width: v.$ancho-max-xl;
 
-    .personaje-details {
-        display: flow-root; 
-
-        .personaje-image {
-            float: left; 
-            margin: 0 v.$espaciado-md v.$espaciado-sm 0; 
-            padding: 0;
-            text-align: center;
-
-            img {
-                max-width: 100%;
-                height: auto;
-                border-radius: calc(v.$radio-borde-md * 0.8);
-                border: 3px solid v.$color-acento;
-                box-shadow: 0 0 15px rgba(v.$color-acento, 0.5);
-                max-height: 250px; 
-                object-fit: cover; 
-            }
-
-            figcaption {
-                margin-top: v.$espaciado-sm; 
-                font-style: italic;
-                color: v.$color-texto-claro;
-                font-size: 0.9em;
-            }
+        h2 {
+            color: v.$color-acento;
+            font-size: 2.5em;
+            margin-bottom: v.$espaciado-sm;
         }
-        
-        .personaje-description p {
-            line-height: 1.6;
-            color: v.$color-texto-base;
+
+        p {
+            color: v.$color-texto-claro;
             font-size: 1.1em;
-            text-align: left;
         }
     }
-}
 
-// ----------------------------------------------------
-// 5. ESTILOS DE CONTROLES DEL CARRUSEL
-// ----------------------------------------------------
-.carousel-control-prev,
-.carousel-control-next {
-    width: 10%; 
-    opacity: 1; 
-    transition: none;
-    
-    &-icon {
+    /* ------------------------------------------------ */
+    /* ESTILOS DEL CARRUSEL */
+    /* ------------------------------------------------ */
+
+    /* 1. Estilo de Cada Tarjeta de Personaje */
+    .personaje-card {
+        min-height: calc(100vh - v.$padding-top-header); 
+        
+        // Propiedades de la imagen de fondo 
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        
+        position: relative;
+        
         display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: v.$fondo-transparente-negro-bajo; 
-        border: 2px solid v.$color-acento;
-        border-radius: 50%;
-        padding: 15px;
-        width: 50px; 
-        height: 50px;
-        box-shadow: 0 0 10px rgba(v.$color-acento, 0.4);
-    }
-    
-    &.carousel-control-prev-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff4500'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
-    }
-    &.carousel-control-next-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff4500'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        justify-content: flex-end;
+        align-items: center; 
+        padding: v.$espaciado-md; 
+        
+        /* Contenedor de la Ficha */
+        .personaje-content-wrapper {
+            background-color: v.$fondo-transparente-negro-medio;
+            padding: v.$espaciado-lg v.$espaciado-md; 
+            border-radius: v.$radio-borde-md;
+            max-width: 90%;
+            
+            margin: 0; 
+            border: 2px solid v.$color-acento;
+        }
+
+        .personaje-title {
+            color: v.$color-acento;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: v.$espaciado-md;
+            text-transform: uppercase;
+        }
+
+        /* Estilos de Imagen Flotante y Envoltura de Texto */
+        .personaje-details {
+            display: block; 
+            overflow: hidden; 
+
+            /* IMAGEN DE PERFIL */
+            .personaje-image {
+                float: left; 
+                margin: 0 v.$espaciado-md v.$espaciado-sm 0; 
+                padding: 0;
+                text-align: center;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: v.$radio-borde-md;
+                    border: 3px solid v.$color-acento;
+                    box-shadow: 0 0 15px rgba(v.$color-acento, 0.5);
+                    max-height: 250px; 
+                    object-fit: contain; 
+                }
+
+                figcaption {
+                    margin-top: v.$espaciado-sm;
+                    font-style: italic;
+                    color: v.$color-texto-claro;
+                    font-size: 0.9em;
+                }
+            }
+
+            .personaje-description p {
+                line-height: 1.6;
+                color: v.$color-texto-base;
+                font-size: 1.1em;
+                text-align: justify;
+            }
+        }
+
+        /* ------------------------------------------------ */
+        /* MEDIA QUERY: Desktop */
+        /* ------------------------------------------------ */
+        @media (min-width: v.$breakpoint-md) {
+            .personaje-content-wrapper {
+                max-width: 500px; 
+                padding: v.$espaciado-lg;
+            }
+            .personaje-details {
+                .personaje-image {
+                    float: right; 
+                    margin: 0 0 v.$espaciado-sm v.$espaciado-md; 
+                }
+            }
+        }
     }
 
-    &:hover &-icon {
-        background-color: rgba(v.$color-acento, 0.2);
-        border-color: v.$color-texto-base;
-        box-shadow: 0 0 15px rgba(v.$color-texto-base, 0.6);
+
+    /* Estilos de los Controles de Bootstrap */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%; 
+        opacity: 1; 
+        transition: opacity v.$tiempo-transicion-base;
+
+        &:hover {
+            opacity: 0.8;
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-color: rgba(v.$color-acento, 0.2);
+                border-color: v.$color-texto-base;
+                box-shadow: 0 0 15px rgba(v.$color-texto-base, 0.6);
+            }
+        }
+
+        /* Estilo del ícono  */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: v.$fondo-transparente-negro-bajo; 
+            border: 2px solid v.$color-acento;
+            border-radius: 50%;
+            padding: 15px;
+            width: 50px; 
+            height: 50px;
+            box-shadow: 0 0 10px rgba(v.$color-acento, 0.4);
+        }
     }
 }
 
+/* ------------------------------------------------ */
+/* Fondos de Personajes */
+/* ------------------------------------------------ */
 
-// ----------------------------------------------------
-// 6. MEDIA QUERIES
-// ----------------------------------------------------
-@include m.desktop-small-up { 
-    .personaje-content-wrapper {
-        max-width: v.$ancho-max-lg;
-        padding: v.$espaciado-lg; 
-    }
+#tanjiro { background-image: url('../assets/img/tanjiro.jpeg'); }
+#nezuko { background-image: url('../assets/img/nezuko.jpeg'); }
+#inosuke { background-image: url('../assets/img/inozuke.jpeg'); }
+#zenitsu { background-image: url('../assets/img/zenitsu.jpeg'); }
+#giyu { background-image: url('../assets/img/tomioka2.jpeg'); }
+#kyojuro { background-image: url('../assets/img/rengoku2.jpeg'); }
+#shinobu { background-image: url('../assets/img/shinobu2.jpeg'); }
+#tengen { background-image: url('../assets/img/uzui2.jpeg'); }
+#gyomei { background-image: url('../assets/img/gyomei2.jpeg'); }
+#sanemi { background-image: url('../assets/img/sanemi2.jpeg'); }
+#muichiro { background-image: url('../assets/img/tokito2.jpeg'); }
+#mitsuri { background-image: url('../assets/img/mitsuri2.jpeg'); }
+#obanai { background-image: url('../assets/img/iguro2.jpeg'); }
+#muzan { background-image: url('../assets/img/muzan.jpeg'); }
 
-    .personaje-details {
-        .personaje-image {
-            float: right; 
-            margin: 0 0 v.$espaciado-sm v.$espaciado-md; 
-        }
-    }
+/* ------------------------------------------------ */
+/* Inyección de SVG para Iconos de Flecha
+/* ------------------------------------------------ */
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff4500'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff4500'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
